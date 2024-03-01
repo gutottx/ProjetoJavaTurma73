@@ -26,5 +26,8 @@ public class ListaMatrizes_ex01 {
 
 		int somaDiagonalSecundaria = matriz[0][2] + matriz[1][1] + matriz[2][0];
 		System.out.println("Soma dos Elementos da Diagonal Secundária: " + somaDiagonalSecundaria);
+		
+
+		
 	}
 }

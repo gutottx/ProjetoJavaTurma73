@@ -1,4 +1,5 @@
 package vetores_matrizes;
+
 import java.util.Scanner;
 
 public class ListaVetores_ex_01 {
@@ -17,11 +18,12 @@ public class ListaVetores_ex_01 {
 				System.out.println("O numero " + numero + " está localizado no índice " + posicao);
 				numeroEncontrado = true;
 				break;
+
 			}
 
 			input.close();
 		}
-			if (!numeroEncontrado) {
+		if (!numeroEncontrado) {
 			System.out.println("Não foi encontrado!");
 		}
 
