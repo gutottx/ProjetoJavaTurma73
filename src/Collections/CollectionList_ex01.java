@@ -21,7 +21,7 @@ public class CollectionList_ex01 {
 
 		Collections.sort(cores);
 		System.out.println("Ordenar as cores: " + cores);
-
+		
 	}
 
 }

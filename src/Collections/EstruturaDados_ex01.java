@@ -1,4 +1,5 @@
 package Collections;
+
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
@@ -9,7 +10,7 @@ public class EstruturaDados_ex01 {
 
 		Scanner scanner = new Scanner(System.in);
 		Queue<String> fila = new LinkedList<>();
-		int opcao;
+		int opcao = -1;
 
 		System.out.println("*****************************");
 		System.out.println("1 - Adicionar Cliente na Fila");
@@ -18,24 +19,28 @@ public class EstruturaDados_ex01 {
 		System.out.println("0 - Sair");
 		System.out.println("*****************************");
 
-		do {
+		while (opcao != 0) {
 			System.out.println("Digite uma opção: ");
 			opcao = scanner.nextInt();
 			scanner.nextLine();
 
-			if (opcao == 1) {
+			switch (opcao) {
+
+			case 1:
 				System.out.println("Digite o nome: ");
 				String nome = scanner.nextLine();
 				fila.add(nome);
 				System.out.println("Cliente Adicionado!");
-			} else if (opcao == 2) {
+				break;
+			case 2:
 				if (fila.isEmpty()) {
 					System.out.println("A fila está vazia!");
 				} else {
 					System.out.println("Lista de Clientes na Fila: ");
 					System.out.println(fila);
 				}
-			} else if (opcao == 3) {
+				break;
+			case 3:
 				if (fila.isEmpty()) {
 					System.out.println("A fila está vazia!");
 				} else {
@@ -43,12 +48,14 @@ public class EstruturaDados_ex01 {
 					System.out.println(fila.remove());
 					System.out.println("O Cliente foi Chamado!");
 				}
-			} else {
+				break;
+			case 0:
 				System.out.println("Programa Finalizado!");
+				break;
+			default:
+				System.out.println("Digite uma opção válida");
 			}
-		} while (opcao != 0);
-
-		scanner.close();
+		}
 	}
 
 }
